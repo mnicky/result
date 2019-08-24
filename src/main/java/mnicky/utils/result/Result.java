@@ -28,12 +28,13 @@ public class Result<SUCCESS, FAILURE> implements Serializable {
     /* TODO:
 
      - add Results.lazy() ?
-     - add .toStream() (similar to Opeional.stream() from Java 9)
+     - add .toStream() similar to Optional.stream() from Java 9 ?
+     - add .orElseThrow throws NoSuchElementException ?
 
      - https://github.com/michaelbull/kotlin-result
      - https://doc.rust-lang.org/std/result/enum.Result.html
 
-     - unit tests
+     - add proper unit tests
 
     */
 
