@@ -148,6 +148,13 @@ public class Result<SUCCESS, FAILURE> implements Serializable {
     public boolean isFailure() {
         return failure != null;
     }
+    
+    // TODO: add this one?
+    //
+    // public Result<SUCCESS, FAILURE> doEffect(Consumer<Result<? super SUCCESS2, ? super FAILURE>> consumer) {
+    //     consumer.accept(this);
+    //     return this;
+    // }
 
     public Result<SUCCESS, FAILURE> ifSuccess(Consumer<? super SUCCESS> consumer) {
         if (isSuccess()) consumer.accept(getSuccess());
