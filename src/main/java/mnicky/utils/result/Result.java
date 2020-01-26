@@ -29,7 +29,7 @@ public class Result<SUCCESS, FAILURE> implements Serializable {
 
      - add Results.lazy() ?
      - add .toStream() similar to Optional.stream() from Java 9 ?
-     - add .orElseThrow throws NoSuchElementException ?
+     - add .orElseThrow throws NoSuchElementException (or some better suited exception) ?
 
      - https://github.com/michaelbull/kotlin-result
      - https://doc.rust-lang.org/std/result/enum.Result.html
@@ -155,6 +155,8 @@ public class Result<SUCCESS, FAILURE> implements Serializable {
     //     consumer.accept(this);
     //     return this;
     // }
+    
+    // TODO: add ifSuccessOrElse() like Optional.ifPresentOrElse() from java 9 ?
 
     public Result<SUCCESS, FAILURE> ifSuccess(Consumer<? super SUCCESS> consumer) {
         if (isSuccess()) consumer.accept(getSuccess());
